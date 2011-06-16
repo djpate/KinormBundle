@@ -2,14 +2,16 @@
 
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
+use Pate\Kinorm\Dbal\Db;
 
 
 class PateKinormExtension extends Extension
 {
     public function load(array $configs, ContainerBuilder $container)
     {
-        $loader = new YamlFileLoader($container, new FileLocator(__DIR__.'/../Resources/config'));
-		$loader->load('config.yaml');
+		foreach($configs as $conf){
+			print_r($conf);
+		}
     }
 
     public function getXsdValidationBasePath()

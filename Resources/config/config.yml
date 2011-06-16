@@ -1,0 +1,13 @@
+parameters:
+  kinorm.db_driver: mysql
+  kinorm.db_user: root
+  kinorm.db_pass: toto
+  kinorm.db_name: toto
+  kinorm.db_host: localhost
+  kinorm.db_charset: utf8
+
+services:
+  kinorm_pdo:
+    class: Pate\KinormBundle\Dbal\Db
+    arguments: [%kinorm.db_driver%,%kinorm.db_user%,%kinorm.db_pass%,%kinorm.db_name%,%kinorm.db_host%,%kinorm.db_charset%]
+    

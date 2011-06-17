@@ -7,10 +7,11 @@
 	
 		protected $id;
 		protected $table;
+		protected $db;
 	
 		public function __construct($id = 0){
 			
-			$this->orm = new orm(get_called_class());
+			$this->db = Db::singleton();
 			
 			if(!is_numeric($id)){
 				throw new \Exception("ID should be an integer");

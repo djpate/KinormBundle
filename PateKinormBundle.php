@@ -11,7 +11,8 @@
 
 namespace Pate\KinormBundle;
 
-use Symfony\Component\HttpKernel\Bundle\Bundle;
+use Symfony\Component\HttpKernel\Bundle\Bundle;*
+use DependencyInjection\PateKinormExtension;
 
 class PateKinormBundle extends Bundle
 {
